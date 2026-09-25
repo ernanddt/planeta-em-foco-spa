@@ -1,0 +1,226 @@
+/* ============================================================
+   PLANETA EM FOCO — ODS 13
+   Estilos personalizados
+   Complementa o Bootstrap 5, aplicando a identidade visual
+   definida no planejamento do projeto.
+   ============================================================ */
+
+/* ---------- Variáveis da identidade visual ---------- */
+:root {
+  --verde-ods: #008c45;
+  --verde-ods-escuro: #006633;
+  --azul-ods: #0077b6;
+  --laranja-ods: #f9a825;
+  --laranja-ods-escuro: #c67c00;
+
+  --fonte-titulo: "Montserrat", sans-serif;
+  --fonte-texto: "Open Sans", sans-serif;
+}
+
+/* ============================================================
+   TIPOGRAFIA
+   ============================================================ */
+body {
+  font-family: var(--fonte-texto);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.card-title {
+  font-family: var(--fonte-titulo);
+}
+
+/* ============================================================
+   REMAPEAMENTO DAS CORES DO BOOTSTRAP PARA A PALETA DO ODS 13
+   O Bootstrap 5.3 monta bg-success, text-success, border-success
+   e as variações de opacidade (bg-opacity-10 etc.) a partir da
+   variável --bs-success-rgb. Redefinindo essa variável aqui, tudo
+   isso passa a usar o verde do ODS 13 automaticamente, inclusive
+   combinações como "bg-success bg-opacity-10" que várias seções
+   do site já usam para um fundo verde bem suave.
+   ============================================================ */
+:root {
+  --bs-success: var(--verde-ods);
+  --bs-success-rgb: 0, 140, 69;
+
+  --bs-warning: var(--laranja-ods);
+  --bs-warning-rgb: 249, 168, 37;
+
+  --bs-primary: var(--azul-ods);
+  --bs-primary-rgb: 0, 119, 182;
+}
+
+/* Os componentes .btn-* usam variáveis próprias, que não herdam
+   de --bs-success/--bs-warning automaticamente. Por isso são
+   redefinidas à parte, preservando os estados de hover/active. */
+.btn-success {
+  --bs-btn-bg: var(--verde-ods);
+  --bs-btn-border-color: var(--verde-ods);
+  --bs-btn-hover-bg: var(--verde-ods-escuro);
+  --bs-btn-hover-border-color: var(--verde-ods-escuro);
+  --bs-btn-active-bg: var(--verde-ods-escuro);
+  --bs-btn-active-border-color: var(--verde-ods-escuro);
+  --bs-btn-disabled-bg: var(--verde-ods);
+  --bs-btn-disabled-border-color: var(--verde-ods);
+}
+
+.btn-outline-success {
+  --bs-btn-color: var(--verde-ods);
+  --bs-btn-border-color: var(--verde-ods);
+  --bs-btn-hover-bg: var(--verde-ods);
+  --bs-btn-hover-border-color: var(--verde-ods);
+  --bs-btn-active-bg: var(--verde-ods);
+  --bs-btn-active-border-color: var(--verde-ods);
+  --bs-btn-disabled-color: var(--verde-ods);
+  --bs-btn-disabled-border-color: var(--verde-ods);
+}
+
+.btn-warning {
+  --bs-btn-bg: var(--laranja-ods);
+  --bs-btn-border-color: var(--laranja-ods);
+  --bs-btn-hover-bg: var(--laranja-ods-escuro);
+  --bs-btn-hover-border-color: var(--laranja-ods-escuro);
+  --bs-btn-active-bg: var(--laranja-ods-escuro);
+  --bs-btn-active-border-color: var(--laranja-ods-escuro);
+  --bs-btn-disabled-bg: var(--laranja-ods);
+  --bs-btn-disabled-border-color: var(--laranja-ods);
+}
+
+/* ============================================================
+   SEÇÃO HERO (página inicial)
+   ============================================================ */
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    var(--verde-ods) 0%,
+    var(--azul-ods) 100%
+  );
+}
+
+.hero-section h1,
+.hero-section p {
+  color: #fff !important;
+}
+
+/* ============================================================
+   BANNERS DAS DEMAIS PÁGINAS
+   Uma faixa colorida no topo identifica visualmente cada seção
+   do site, sem depender de imagem.
+   ============================================================ */
+.ods-banner-section,
+.dados-banner-section,
+.acoes-banner-section,
+.recursos-banner-section,
+.contato-banner-section {
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(
+      to right,
+      transparent,
+      var(--laranja-ods),
+      transparent
+    )
+    1;
+}
+
+/* ============================================================
+   CARDS DOS 17 ODS (página inicial)
+   ============================================================ */
+.card-ods {
+  border: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card-ods:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+.ods-numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--verde-ods);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+/* ============================================================
+   CARDS DE DADOS CLIMÁTICOS (página Dados)
+   ============================================================ */
+.card-dado {
+  border-top: 4px solid var(--azul-ods);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card-dado:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+}
+
+.numero-dado {
+  display: block;
+}
+
+.rotulo-dado {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+/* ============================================================
+   CARDS GERAIS (recursos, ações, ODS 13 etc.)
+   Efeito de hover consistente em todos os cards do Bootstrap
+   que ainda não têm um estilo próprio definido acima.
+   ============================================================ */
+.card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+}
+
+/* ============================================================
+   FOCO VISÍVEL NO TECLADO (acessibilidade)
+   ============================================================ */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 3px solid var(--laranja-ods);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   PREFERÊNCIA POR MOVIMENTO REDUZIDO
+   Usuários que ativam essa preferência no sistema operacional
+   deixam de ver as animações de hover/transição definidas acima.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card-ods,
+  .card-dado {
+    transition: none;
+  }
+
+  .card:hover,
+  .card-ods:hover,
+  .card-dado:hover {
+    transform: none;
+  }
+}

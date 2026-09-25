@@ -1,0 +1,25 @@
+@use "bootstrap/scss/bootstrap" as bs;
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+//cores personalizadas
+$primary-color: #2c3e50;
+$secondary-color: #27ae60;
+$danger-color: #e74c3c;
+
+// estilos globais
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f8f9fa;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}

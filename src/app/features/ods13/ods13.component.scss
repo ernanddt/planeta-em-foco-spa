@@ -1,0 +1,228 @@
+/* ============================================================
+   ODS BANNER SECTION
+   ============================================================ */
+.ods-banner-section {
+  background: #89e0bf;
+  color: white;
+  text-align: center;
+  padding: 3rem 0;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
+}
+
+/* ============================================================
+   CAUSAS SECTION
+   ============================================================ */
+.causas-section {
+  background: #fff;
+  padding: 3rem 0;
+
+  h2 {
+    color: #e7eeea;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .causas-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .causa-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    i {
+      font-size: 2.5rem;
+      color: #0077b6;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #008c45;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #666;
+      font-size: 1rem;
+    }
+  }
+}
+
+/* ============================================================
+   CONSEQUENCIAS SECTION
+   ============================================================ */
+.consequencias-section {
+  background: #f8f9fa;
+  padding: 3rem 0;
+
+  h2 {
+    color: #008c45;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .consequencias-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .consequencia-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    i {
+      font-size: 2.5rem;
+      color: #f9a825;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #008c45;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #666;
+      font-size: 1rem;
+    }
+  }
+}
+
+/* ============================================================
+   SOLUCOES SECTION
+   ============================================================ */
+.solucoes-section {
+  background: #fff;
+  padding: 3rem 0;
+
+  h2 {
+    color: #008c45;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .solucoes-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .solucao-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    i {
+      font-size: 2.5rem;
+      color: #0077b6;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #008c45;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #666;
+      font-size: 1rem;
+    }
+  }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .ods-banner-section {
+    padding: 2rem 0;
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .causas-section,
+  .consequencias-section,
+  .solucoes-section {
+    padding: 2rem 0;
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+
+  .causas-content,
+  .consequencias-content,
+  .solucoes-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

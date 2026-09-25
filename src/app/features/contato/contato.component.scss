@@ -1,0 +1,203 @@
+/* ============================================================
+   CONTATO BANNER SECTION
+   ============================================================ */
+.contato-banner-section {
+  background: #008c45;
+  color: rgb(26, 24, 24);
+  text-align: center;
+  padding: 3rem 0;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
+}
+
+/* ============================================================
+   FORMULARIO
+   ============================================================ */
+.contato-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition:
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:focus {
+      outline: none;
+      border-color: #008c45;
+      box-shadow: 0 0 0 2px rgba(0, 140, 69, 0.25);
+    }
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+}
+
+.btn-submit {
+  background: #008c45;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    background: #006d37;
+    transform: translateY(-2px);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 140, 69, 0.5);
+  }
+}
+
+/* ============================================================
+   CARDS INFORMACOES
+   ============================================================ */
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.info-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 2rem;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  i {
+    font-size: 2.5rem;
+    color: #0077b6;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    color: #008c45;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/* ============================================================
+   REDES SOCIAIS
+   ============================================================ */
+.social-links {
+  margin-top: 2rem;
+  text-align: center;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 0.5rem;
+    background: #f8f9fa;
+    border-radius: 50%;
+    color: #0077b6;
+    font-size: 1.25rem;
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      transform 0.25s ease;
+
+    &:hover {
+      background: #0077b6;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 119, 182, 0.5);
+    }
+  }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .contato-banner-section {
+    padding: 2rem 0;
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .contato-form {
+    padding: 2rem 0;
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

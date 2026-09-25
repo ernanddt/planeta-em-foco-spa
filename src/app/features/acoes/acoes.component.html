@@ -1,0 +1,256 @@
+<!-- SEÇÃO BANNER -->
+<section class="acoes-banner-section py-5 bg-light">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold">🌱 Ações Práticas</h1>
+    <p class="fs-5">
+      Pequenas mudanças no dia a dia que fazem uma grande diferença para o
+      planeta.
+    </p>
+  </div>
+</section>
+
+<!-- SEÇÃO CALCULADORA -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">📱 Calcule sua Pegada de Carbono</h2>
+    <p class="fs-5 mb-4">
+      Descubra qual é o seu impacto no meio ambiente.
+    </p>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-sm p-4">
+          <i class="bi bi-calculator-fill display-1 text-secondary"></i>
+          <p class="mt-3 text-muted">
+            Informe seu consumo de energia, transporte e hábitos alimentares para calcular sua pegada de carbono.
+          </p>
+          <button class="btn btn-primary mt-3" (click)="showCalculatorModal = true">
+            Calcular minha Pegada
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO AÇÕES DETALHADAS -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Ação 1: Reciclagem -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card acao-card h-100 shadow-sm">
+          <img
+            src="assets/images/acoes/reciclagem.jpg"
+            class="card-img-top"
+            alt="Pessoa separando lixo para reciclagem"
+          />
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-recycle fs-2 text-success me-2"></i>
+              <h5 class="card-title">Recicle seus Resíduos</h5>
+            </div>
+            <p class="card-text">
+              Separe o lixo orgânico do reciclável. Plástico, vidro, papel
+              e metal podem ser reaproveitados, reduzindo o impacto
+              ambiental.
+            </p>
+            <ul class="list-unstyled small">
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Reduz a
+                poluição
+              </li>
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Economiza
+                recursos naturais
+              </li>
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Gera renda
+                para catadores
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ação 2: Transporte Sustentável -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card acao-card h-100 shadow-sm">
+          <img
+            src="assets/images/acoes/transporte-sustentavel.jpg"
+            class="card-img-top"
+            alt="Pessoa andando de bicicleta"
+          />
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-bicycle fs-2 text-success me-2"></i>
+              <h5 class="card-title">Transporte Sustentável</h5>
+            </div>
+            <p class="card-text">
+              Prefira meios de transporte que não emitem poluentes:
+              bicicleta, transporte público ou caronas compartilhadas.
+            </p>
+            <ul class="list-unstyled small">
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Reduz
+                emissões de CO₂
+              </li>
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Melhora a
+                qualidade do ar
+              </li>
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Promove
+                saúde e bem-estar
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ação 3: Economia de Energia -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card acao-card h-100 shadow-sm">
+          <img
+            src="assets/images/acoes/energia-solar.jpg"
+            class="card-img-top"
+            alt="Painéis solares"
+          />
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-lightbulb fs-2 text-warning me-2"></i>
+              <h5 class="card-title">Economize Energia</h5>
+            </div>
+            <p class="card-text">
+              Pequenos gestos como apagar luzes, usar lâmpadas LED e
+              investir em energia solar reduzem o consumo e a pegada de
+              carbono.
+            </p>
+            <ul class="list-unstyled small">
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Reduz a
+                conta de luz
+              </li>
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Diminui
+                emissões
+              </li>
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Aproveita
+                fontes renováveis
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ação 4: Plantio de Árvores -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card acao-card h-100 shadow-sm">
+          <img
+            src="assets/images/acoes/plantar-arvore.jpg"
+            class="card-img-top"
+            alt="Pessoa plantando uma árvore"
+          />
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-tree fs-2 text-success me-2"></i>
+              <h5 class="card-title">Plante uma Árvore</h5>
+            </div>
+            <p class="card-text">
+              O reflorestamento é uma das formas mais eficazes de combater
+              as mudanças climáticas. Cada árvore absorve CO₂ e produz
+              oxigênio.
+            </p>
+            <ul class="list-unstyled small">
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Absorve
+                CO₂ da atmosfera
+              </li>
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Promove
+                biodiversidade
+              </li>
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Previne
+                erosão do solo
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ação 5: Consumo Consciente -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card acao-card h-100 shadow-sm">
+          <img
+            src="assets/images/acoes/consumo-consciente.jpg"
+            class="card-img-top"
+            alt="Pessoa fazendo compras sustentáveis"
+          />
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-cart fs-2 text-success me-2"></i>
+              <h5 class="card-title">Consumo Consciente</h5>
+            </div>
+            <p class="card-text">
+              Compre apenas o que realmente precisa, prefira produtos
+              sustentáveis e evite o desperdício de alimentos e materiais.
+            </p>
+            <ul class="list-unstyled small">
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Reduz o
+                desperdício
+              </li>
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Economiza
+                recursos
+              </li>
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Incentiva
+                práticas sustentáveis
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ação 6: Educação Ambiental -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card acao-card h-100 shadow-sm">
+          <img
+            src="assets/images/acoes/educacao-ambiental.jpg"
+            class="card-img-top"
+            alt="Pessoas em aula de educação ambiental"
+          />
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-book fs-2 text-success me-2"></i>
+              <h5 class="card-title">Eduque-se e Compartilhe</h5>
+            </div>
+            <p class="card-text">
+              Quanto mais pessoas conhecerem os impactos das mudanças
+              climáticas, maiores serão as chances de mudarmos o futuro.
+            </p>
+            <ul class="list-unstyled small">
+              <li>
+                <i class="bi bi-check-circle text-success"></i>
+                Conscientização coletiva
+              </li>
+              <li>
+                <i class="bi bi-check-circle text-success"></i> Mudança de
+                hábitos
+              </li>
+              <li>
+                <i class="bi bi-check-circle text-success"></i>
+                Multiplicação do conhecimento
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Calculadora -->
+<app-calculadora-modal [(visible)]="showCalculatorModal"></app-calculadora-modal>

@@ -1,0 +1,109 @@
+/* ============================================================
+   ACOES BANNER SECTION
+   ============================================================ */
+.acoes-banner-section {
+  background: #008c45;
+  color: rgb(32, 30, 30);
+  text-align: center;
+  padding: 3rem 0;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
+}
+
+/* ============================================================
+   ACOES CARDS
+   ============================================================ */
+.acoes-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.acoes-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .acoes-card-content {
+    padding: 1.5rem;
+
+    h3 {
+      color: #008c45;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .acoes-card-date {
+      display: block;
+      font-size: 0.875rem;
+      color: #999;
+      margin-top: auto;
+    }
+  }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .acoes-banner-section {
+    padding: 2rem 0;
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .acoes-cards {
+    grid-template-columns: 1fr;
+    padding: 2rem 0;
+  }
+}
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,239 @@
+
+      <!-- SEÇÃO BANNER -->
+      <section class="contato-banner-section py-5 bg-light">
+        <div class="container text-center">
+          <h1 class="display-4 fw-bold">📧 Fale Conosco</h1>
+          <p class="fs-5">
+            Tire suas dúvidas, compartilhe ideias ou sugira parcerias.
+          </p>
+        </div>
+      </section>
+
+      <!-- SEÇÃO FORMULÁRIO + INFORMAÇÕES -->
+      <section class="py-5">
+        <div class="container">
+          <div class="row g-4">
+            <!-- Coluna do Formulário -->
+            <div class="col-lg-7">
+              <div class="card shadow-sm">
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-3">Envie sua Mensagem</h4>
+                  <p class="text-muted small">
+                    <i class="bi bi-info-circle"></i>
+                    Na Nota 2, este formulário será funcional com JavaScript.
+                  </p>
+                  <form>
+                    <div class="mb-3">
+                      <label for="nome" class="form-label fw-bold"
+                        >Nome Completo</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nome"
+                        placeholder="Seu nome completo"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label fw-bold"
+                        >E-mail</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="seu@email.com"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="assunto" class="form-label fw-bold"
+                        >Assunto</label
+                      >
+                      <select class="form-select" id="assunto">
+                        <option value="">Selecione um assunto</option>
+                        <option value="duvida">Dúvida sobre o projeto</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="parceria">Parceria</option>
+                        <option value="outro">Outro</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="mensagem" class="form-label fw-bold"
+                        >Mensagem</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="mensagem"
+                        rows="5"
+                        placeholder="Digite sua mensagem aqui..."
+                        required
+                      ></textarea>
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn btn-success w-100 fw-bold"
+                      disabled
+                    >
+                      <i class="bi bi-send"></i> Enviar Mensagem
+                    </button>
+                    <p class="text-muted text-center small mt-2">
+                      <span class="badge bg-warning text-dark">
+                        <i class="bi bi-clock"></i> Funcionalidade disponível na
+                        Nota 2
+                      </span>
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Coluna de Informações -->
+            <div class="col-lg-5">
+              <div class="card shadow-sm h-100">
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-3">Informações de Contato</h4>
+
+                  <div class="mb-4">
+                    <h6>
+                      <i class="bi bi-envelope me-2 text-success"></i> E-mail
+                    </h6>
+                    <p class="text-muted">projeto.ods13&#64;gmail.com</p>
+                  </div>
+
+                  <div class="mb-4">
+                    <h6>
+                      <i class="bi bi-telephone me-2 text-success"></i> Telefone
+                    </h6>
+                    <p class="text-muted">(98) 99999-9999</p>
+                  </div>
+
+                  <div class="mb-4">
+                    <h6>
+                      <i class="bi bi-geo-alt me-2 text-success"></i> Endereço
+                    </h6>
+                    <p class="text-muted">
+                      Universidade Estadual do Maranhão <br />
+                      Rua da Sustentabilidade, 123<br />
+                      São Luís - MA
+                    </p>
+                  </div>
+
+                  <hr />
+
+                  <h6 class="fw-bold">Redes Sociais</h6>
+                  <div class="d-flex gap-3 mt-2">
+                    <a href="#" class="text-success fs-3"
+                      ><i class="bi bi-instagram"></i
+                    ></a>
+                    <a href="#" class="text-success fs-3"
+                      ><i class="bi bi-twitter"></i
+                    ></a>
+                    <a href="#" class="text-success fs-3"
+                      ><i class="bi bi-youtube"></i
+                    ></a>
+                    <a href="#" class="text-success fs-3"
+                      ><i class="bi bi-linkedin"></i
+                    ></a>
+                  </div>
+
+                  <div class="mt-4 p-3 bg-light rounded">
+                    <h6>
+                      <i class="bi bi-clock me-2"></i>Horário de Atendimento
+                    </h6>
+                    <p class="mb-0">Segunda a Sexta: 9h - 18h</p>
+                    <p class="mb-0">Sábado: 9h - 12h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO FAQ -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center fw-bold mb-4">❓ Perguntas Frequentes</h2>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="accordion" id="faq">
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq1"
+                    >
+                      O que é o ODS 13?
+                    </button>
+                  </h3>
+                  <div
+                    id="faq1"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#faq"
+                  >
+                    <div class="accordion-body">
+                      O ODS 13 é o 13º Objetivo de Desenvolvimento Sustentável
+                      da ONU, que trata da
+                      <strong>Ação Contra a Mudança Global do Clima</strong>.
+                      Ele busca tomar medidas urgentes para combater as mudanças
+                      climáticas e seus impactos.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq2"
+                    >
+                      Como posso contribuir para o ODS 13?
+                    </button>
+                  </h3>
+                  <div
+                    id="faq2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faq"
+                  >
+                    <div class="accordion-body">
+                      Pequenas ações como reciclar, economizar energia, usar
+                      transporte sustentável, plantar árvores e consumir de
+                      forma consciente já fazem uma grande diferença. Confira
+                      nossa página de <a [routerLink]="['/acoes']">Ações Práticas</a>.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq3"
+                    >
+                      O projeto é gratuito?
+                    </button>
+                  </h3>
+                  <div
+                    id="faq3"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faq"
+                  >
+                    <div class="accordion-body">
+                      Sim! O Planeta em Foco é um projeto acadêmico e
+                      educacional, totalmente gratuito e aberto a todos que
+                      desejam aprender e contribuir.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    

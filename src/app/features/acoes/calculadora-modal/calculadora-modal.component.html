@@ -1,0 +1,165 @@
+<div class="modal-backdrop" *ngIf="visible" (click)="fechar()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <header class="modal-header">
+      <h2>Calculadora de Pegada de Carbono</h2>
+      <button class="btn-close" (click)="fechar()">&times;</button>
+    </header>
+    <section class="modal-body">
+      <div class="desktop-warning" *ngIf="visible">
+        <i class="bi bi-info-circle me-1"></i> Melhor visualizado em Desktop
+      </div>
+
+      <div class="inputs-grid">
+        <!-- Transporte -->
+        <fieldset>
+          <legend>Transporte</legend>
+          <div class="form-group">
+            <label for="vehicleType">Tipo de veículo</label>
+            <select id="vehicleType" [(ngModel)]="vehicleType">
+              <option value="car">Carro</option>
+              <option value="motorcycle">Motocicleta</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="vehicleKm">Distância mensal com veículo (km)</label>
+            <input
+              type="number"
+              id="vehicleKm"
+              [(ngModel)]="vehicleKmPerMonth"
+              min="0"
+            />
+          </div>
+        </fieldset>
+
+        <!-- Energia -->
+        <fieldset>
+          <legend>Energia</legend>
+          <div class="form-group">
+            <label for="electricityKwh">Consumo mensal de energia (kWh)</label>
+            <input
+              type="number"
+              id="electricityKwh"
+              [(ngModel)]="electricityKwhPerMonth"
+              min="0"
+            />
+          </div>
+          <div class="form-group">
+            <label for="electricitySource">Fonte de energia</label>
+            <select id="electricitySource" [(ngModel)]="electricitySource">
+              <option value="grid">Rede convencional</option>
+              <option value="solar">Solar</option>
+              <option value="wind">Eólica</option>
+              <option value="hydro">Hidrelétrica</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- Alimentação -->
+        <fieldset>
+          <legend>Alimentação</legend>
+          <div class="form-group">
+            <label for="dietType">Tipo de dieta</label>
+            <select id="dietType" [(ngModel)]="dietType">
+              <option value="omnivore">Onívoro</option>
+              <option value="vegetarian">Vegetariano</option>
+              <option value="vegan">Vegano</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="beefMeals">Refeições com carne bovina por semana</label>
+            <input
+              type="number"
+              id="beefMeals"
+              [(ngModel)]="beefMealsPerWeek"
+              min="0"
+              max="21"
+            />
+          </div>
+          <div class="form-group">
+            <label for="dairyServings">Porções de laticínios por dia</label>
+            <input
+              type="number"
+              id="dairyServings"
+              [(ngModel)]="dairyServingsPerDay"
+              min="0"
+              max="10"
+            />
+          </div>
+        </fieldset>
+
+        <!-- Consumo -->
+        <fieldset>
+          <legend>Consumo</legend>
+          <div class="form-group">
+            <label for="goodsServices"
+              >Gasto mensal com bens e serviços (R$)</label
+            >
+            <input
+              type="number"
+              id="goodsServices"
+              [(ngModel)]="goodsServicesSpendPerMonth"
+              min="0"
+            />
+          </div>
+          <div class="form-group">
+            <label>
+              <input
+                type="checkbox"
+                id="wasteRecycling"
+                [(ngModel)]="wasteRecycling"
+              />
+              Reciclo meus resíduos
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="btn-calcular" (click)="calcular()">CALCULAR</button>
+      <div *ngIf="resultado > 0" class="resultado">
+        <div class="progress-bar" [style.background]="cor"></div>
+        <div class="resultado-texto">
+          <span class="valor">{{ resultado.toFixed(2) }} tCO₂</span>
+          <span class="feedback">{{ feedback }}</span>
+        </div>
+
+        <!-- Breakdown by category -->
+        <div class="resultado-breakdown">
+          <div class="breakdown-item">
+            <span>Transporte:</span>
+            <span>{{ transporteEmission.toFixed(2) }} tCO₂</span>
+          </div>
+          <div class="breakdown-item">
+            <span>Energia:</span>
+            <span>{{ energiaEmission.toFixed(2) }} tCO₂</span>
+          </div>
+          <div class="breakdown-item">
+            <span>Alimentação:</span>
+            <span>{{ alimentacaoEmission.toFixed(2) }} tCO₂</span>
+          </div>
+          <div class="breakdown-item">
+            <span>Consumo:</span>
+            <span>{{ consumoEmission.toFixed(2) }} tCO₂</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="botoes-compartilhamento">
+        <button class="btn-compartilhar" disabled title="Implementação futura">
+          📋 Copiar Resultado
+        </button>
+        <button class="btn-compartilhar" disabled title="Implementação futura">
+          💬 WhatsApp
+        </button>
+        <button class="btn-compartilhar" disabled title="Implementação futura">
+          🐦 Twitter/X
+        </button>
+        <button class="btn-compartilhar" disabled title="Implementação futura">
+          ✉️ Email
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-ver-acoes" (click)="verAcoes()">Ver Ações</button>
+      </div>
+    </section>
+  </div>
+</div>
