@@ -12,7 +12,11 @@ out-tsc/
 *.js.map
 *.d.ts
 
-# IDE - Claude Code artifacts (IMPORTANTE para projeto acadêmico)
+# Angular
+.angular/
+.angular/cache/
+
+# IDE - Claude artifacts (IMPORTANTE)
 .claude/
 .claude-flow/
 claude_*.md
@@ -21,9 +25,6 @@ claude_*.md
 *.swp
 *.swo
 *~
-.DS_Store
-.idea/
-*.iml
 
 # Environment
 .env
@@ -42,4 +43,3 @@ logs/
 tmp/
 temp/
 *.bak
-*.swp
