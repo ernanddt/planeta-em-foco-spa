@@ -43,3 +43,5 @@ logs/
 tmp/
 temp/
 *.bak
+# Playwright CLI output (may contain credentials)
+.playwright-cli/

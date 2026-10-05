@@ -115,33 +115,42 @@
       </div>
 
       <button class="btn-calcular" (click)="calcular()">CALCULAR</button>
-      <div *ngIf="resultado > 0" class="resultado">
+
+      <!-- Warning when no data provided -->
+      <div *ngIf="showNoDataWarning" class="alert-warning">
+        <i class="bi bi-exclamation-circle me-1"></i>
+        <span>Nenhum dado informado. Os resultados estão em kg CO2/mês.</span>
+      </div>
+
+      <div *ngIf="resultado > 0 || showNoDataWarning" class="resultado">
         <div class="progress-bar" [style.background]="cor"></div>
         <div class="resultado-texto">
-          <span class="valor">{{ resultado.toFixed(2) }} tCO₂</span>
+          <span class="valor">{{ resultado.toFixed(0) }} kg CO2/mês</span>
           <span class="feedback">{{ feedback }}</span>
         </div>
 
         <!-- Breakdown by category -->
-        <div class="resultado-breakdown">
+        <div *ngIf="showBreakdown" class="resultado-breakdown">
           <div class="breakdown-item">
             <span>Transporte:</span>
-            <span>{{ transporteEmission.toFixed(2) }} tCO₂</span>
+            <span>{{ transporteEmission.toFixed(0) }} kg CO2/mês</span>
           </div>
           <div class="breakdown-item">
             <span>Energia:</span>
-            <span>{{ energiaEmission.toFixed(2) }} tCO₂</span>
+            <span>{{ energiaEmission.toFixed(0) }} kg CO2/mês</span>
           </div>
           <div class="breakdown-item">
             <span>Alimentação:</span>
-            <span>{{ alimentacaoEmission.toFixed(2) }} tCO₂</span>
+            <span>{{ alimentacaoEmission.toFixed(0) }} kg CO2/mês</span>
           </div>
           <div class="breakdown-item">
             <span>Consumo:</span>
-            <span>{{ consumoEmission.toFixed(2) }} tCO₂</span>
+            <span>{{ consumoEmission.toFixed(0) }} kg CO2/mês</span>
           </div>
         </div>
       </div>
+
+      <button class="btn-limpar" (click)="limparDados()">Zerar dados</button>
 
       <div class="botoes-compartilhamento">
         <button class="btn-compartilhar" disabled title="Implementação futura">
